@@ -11,6 +11,15 @@ CORS(app)
 
 conexion=MySQL(app)
 
+@app.route('/quini6', methods=['GET'])
+# trae resultado de la ultima jugada
+def quini6():
+    try:
+        return 'todo OK'
+        
+    except Exception as ex:
+        return jsonify({'mensaje':'Error '})
+
 @app.route('/usuarios', methods=['GET'])
 # trae todas las filas de la tabla 'obras'
 def listar_obras():
