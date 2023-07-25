@@ -12,13 +12,13 @@ CORS(app)
 
 conexion=MySQL(app)
 
-trad = {'tradicional':[1,2,3,4,5,6]}
+trad = {'tradicional':{'1':11,'2':12,'3':13,'4':14,'5':15,'6':16}}
 
 @app.route('/quini6', methods=['GET'])
 # trae resultado de la ultima jugada
 def quini6():
     try:
-        return json.dumps(trad, indent=3)
+        return json.dumps(trad)
         
     except Exception as ex:
         return jsonify({'mensaje':'Error '})
