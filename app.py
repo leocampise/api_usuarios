@@ -18,8 +18,9 @@ trad = {'tradicional':{'1':11,'2':12,'3':13,'4':14,'5':15,'6':16}}
 # trae resultado de la ultima jugada
 def quini6():
     try:
-        sorteo=trad['tradicional']
-        return jsonify(sorteo['3'])
+        #sorteo=trad['tradicional'] #probando como gestionar el resultado
+        #return jsonify(sorteo['3'])
+        return jsonify(trad)
         
     except Exception as ex:
         return jsonify({'mensaje':'Error '})
