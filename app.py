@@ -19,8 +19,7 @@ trad = {'tradicional':{'1':11,'2':12,'3':13,'4':14,'5':15,'6':16}}
 def quini6():
     try:
         sorteo=trad['tradicional']
-        return jsonify(sorteo['1'])
-        #return jsonify(sorteo)
+        return jsonify(sorteo['3'])
         
     except Exception as ex:
         return jsonify({'mensaje':'Error '})
