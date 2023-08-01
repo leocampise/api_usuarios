@@ -12,10 +12,10 @@ CORS(app)
 
 conexion=MySQL(app)
 
-trad = {'tradicional':{'1':18,'2':20,'3':22,'4':36,'5':39,'6':40}}
-seg = {'segunda':{'1':2,'2':11,'3':15,'4':19,'5':31,'6':37}}
-rev = {'revancha':{'1':4,'2':5,'3':11,'4':20,'5':23,'6':26}}
-siem = {'siempre':{'1':4,'2':25,'3':26,'4':29,'5':31,'6':36}}
+trad = {'tradicional':{'1':18,'2':20,'3':22,'4':36,'5':39,'6':40},'segunda':{'1':2,'2':11,'3':15,'4':19,'5':31,'6':37}}
+#seg = {'segunda':{'1':2,'2':11,'3':15,'4':19,'5':31,'6':37}}
+#rev = {'revancha':{'1':4,'2':5,'3':11,'4':20,'5':23,'6':26}}
+#siem = {'siempre':{'1':4,'2':25,'3':26,'4':29,'5':31,'6':36}}
 
 @app.route('/quini6', methods=['GET'])
 # trae resultado de la ultima jugada
@@ -23,7 +23,7 @@ def quini6():
     try:
         #sorteo=trad['tradicional'] #probando como gestionar el resultado
         #return jsonify(sorteo['3'])
-        return jsonify(trad),jsonify(seg),jsonify(rev),jsonify(siem)
+        return jsonify(trad)
         
     except Exception as ex:
         return jsonify({'mensaje':'Error '})
